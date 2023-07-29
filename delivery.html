@@ -1,0 +1,381 @@
+<!DOCTYPE html >
+<html lang="ru">
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="./assets/fonts/fonts.css"/>
+  <link rel="stylesheet" href="./assets/css/style.css"/>
+  <link rel="stylesheet" href="./assets/css/libs.min.css"/>
+  <script src="assets/js/libs.min.js?1688543299682"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;apikey=14138a0b-9610-49af-8558-1912c229e70e" type="text/javascript"> </script>
+  <script src="assets/js/other.js"></script>
+  <title>Document</title>
+</html>
+<body>
+  <header class="header"> 
+    <div class="container">
+      <div class="header-content">
+        <div class="header-top"> 
+          <div class="header-logo"> 
+            <div class="header-logo__img"> <img src="./assets/img/logo_header.svg"/></div>
+            <div class="header-logo__text">Контрольно-измерительное оборудование по всей России</div>
+          </div>
+          <div class="header-right"> 
+            <div class="header-buttons"> <a class="btn white header-btn openmodal" data-modal="modal-callback">Заказать звонок</a><a class="btn green header-btn" href="">Подобрать аналог</a></div>
+            <div class="header-feedback"> 
+              <div class="header-feedback__text">Для заявок и обратной связи</div>
+              <div class="header-feedback__mail"> <a href="mailto:info@promer.pro">info@promer.pro</a></div>
+            </div>
+            <div class="header-info"> 
+              <div class="header-info__worktime">Пн—Пт с 9 до 18</div>
+              <div class="header-info__phone"><a href="tel:8 (8352) 76-76-07">8 (8352) 76-76-07</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="header-bottom"> 
+          <ul class="header-menu">
+            <li class="header-menu__point catalog-point"> <a>
+                <div class="catalog-point__burger"> <img src="./assets/img/catalog-burger.svg"/></div>
+                <div class="catalog-point__text">Каталог</div></a></li>
+            <li class="header-menu__point"><a href="">Бренды</a></li>
+            <li class="header-menu__point"><a href="">Компания</a></li>
+            <li class="header-menu__point"><a href="">Доставка и оплата</a></li>
+            <li class="header-menu__point dropdown-point"><a>База знаний</a>
+              <ul class="dropdown-point__list">
+                <li> <a class="header-menu__point" href="">Опросные листы </a></li>
+                <li> <a class="header-menu__point" href="">Конвертер величин</a></li>
+                <li> <a class="header-menu__point" href="">Каталоги производителей</a></li>
+              </ul>
+            </li>
+            <li class="header-menu__point dropdown-point"><a>Пресс-центр</a>
+              <ul class="dropdown-point__list">
+                <li> <a class="header-menu__point" href="">Новости </a></li>
+                <li> <a class="header-menu__point" href="">Статьи</a></li>
+              </ul>
+            </li>
+            <li class="header-menu__point"><a href="">Контакты</a></li>
+          </ul>
+          <div class="header-search">
+            <input type="text" name="search" placeholder="Название товара или артикул"/>
+            <div class="header-search__glass-icon"> <img src="./assets/img/glass.svg"/></div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="menu__content"> 
+            <div class="menu__item"><a class="menu__item-link" href="">Системы автоматизации</a></div>
+            <div class="menu__item"><a class="menu__item-link">Расходомеры и ротамеры</a>
+              <ul class="menu__subitem-list"> 
+                <li> <a class="menu__subitem-link" href="">Ротамеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Вихревые расходомеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Кориолисовые расходомеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Термомассовые расходомеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Ультразвуковые расходомеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Электромагнитные расходомеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Принадлежности к расходомерам и ротамерам</a></li>
+              </ul>
+            </div>
+            <div class="menu__item"><a class="menu__item-link" href="">Манометры и индикаторы</a></div>
+            <div class="menu__item"><a class="menu__item-link" href="">Датчики давления</a>
+              <ul class="menu__subitem-list">
+                <li> <a class="menu__subitem-link" href="">Датчики абсолютного и избыточного давления</a></li>
+                <li> <a class="menu__subitem-link" href="">Датчики гидростатического уровня</a></li>
+                <li> <a class="menu__subitem-link" href="">Датчики дифференциального давления</a></li>
+                <li> <a class="menu__subitem-link" href="">Электронные реле давления</a></li>
+                <li> <a class="menu__subitem-link" href="">Принадлежности к датчикам давления</a></li>
+              </ul>
+            </div>
+            <div class="menu__item"><a class="menu__item-link">Термометры</a>
+              <ul class="menu__subitem-list"> 
+                <li> <a class="menu__subitem-link" href="">Термометры</a></li>
+                <li> <a class="menu__subitem-link" href="">Термоманометры</a></li>
+              </ul>
+            </div>
+            <div class="menu__item"><a class="menu__item-link">Датчики температуры</a>
+              <ul class="menu__subitem-list"> 
+                <li> <a class="menu__subitem-link" href="">Высокотемпературные термометры</a></li>
+                <li> <a class="menu__subitem-link" href="">Гигиенические термометры</a></li>
+                <li> <a class="menu__subitem-link" href="">Компактные датчики температуры</a></li>
+                <li> <a class="menu__subitem-link" href="">Многоточечные датчики температуры</a></li>
+                <li> <a class="menu__subitem-link" href="">Преобразователи температуры</a></li>
+                <li> <a class="menu__subitem-link" href="">Промышленные датчики температуры</a></li>
+                <li> <a class="menu__subitem-link" href="">Температурные переключатели</a></li>
+                <li> <a class="menu__subitem-link" href="">Термометры для тяжелых условий эксплуатации</a></li>
+              </ul>
+            </div>
+            <div class="menu__item"><a class="menu__item-link">Уровнемеры</a>
+              <ul class="menu__subitem-list"> 
+                <li> <a class="menu__subitem-link" href="">Погружные датчики уровня</a></li>
+                <li> <a class="menu__subitem-link" href="">Вибрационные уровнемеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Емкостные уровнемеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Микроимпульсные уровнемеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Радарные уровнемеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Ультразвуковые уровнемеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Флажковые уровнемеры</a></li>
+                <li> <a class="menu__subitem-link" href="">Термометры для тяжелых условий эксплуатации</a></li>
+              </ul>
+            </div>
+            <div class="menu__item"><a class="menu__item-link">Анализаторы</a>
+              <ul class="menu__subitem-list"> 
+                <li> <a class="menu__subitem-link" href="">Анализаторы TOC, COD и SAC</a></li>
+                <li> <a class="menu__subitem-link" href="">Анализаторы для определения жесткости, содержания железа, хроматов</a></li>
+                <li> <a class="menu__subitem-link" href="">Датчики и преобразователи</a></li>
+                <li> <a class="menu__subitem-link" href="">Датчики кислорода</a></li>
+                <li> <a class="menu__subitem-link" href="">Датчики мутности</a></li>
+                <li> <a class="menu__subitem-link" href="">Датчики проводимости</a></li>
+                <li> <a class="menu__subitem-link" href="">Преобразователи и датчики хлора</a></li>
+                <li> <a class="menu__subitem-link" href="">Фотометры</a></li>
+              </ul>
+            </div>
+            <div class="menu__item"><a class="menu__item-link">Пневматика</a>
+              <ul class="menu__subitem-list"> 
+                <li> <a class="menu__subitem-link" href="">Пневмораспределители</a></li>
+                <li> <a class="menu__subitem-link" href="">Фитинги</a></li>
+                <li> <a class="menu__subitem-link" href="">Пневматические трубки</a></li>
+                <li> <a class="menu__subitem-link" href="">Подготовка сжатого воздуха</a></li>
+                <li> <a class="menu__subitem-link" href="">Клапаны и фильтры</a></li>
+                <li> <a class="menu__subitem-link" href="">Пневмодроссели и обратные клапаны</a></li>
+                <li> <a class="menu__subitem-link" href="">Пневматические цилиндры и приводы</a></li>
+                <li> <a class="menu__subitem-link" href="">Резьбовые соединения и трубки</a></li>
+                <li> <a class="menu__subitem-link" href="">Вакуумное оборудование</a></li>
+                <li> <a class="menu__subitem-link" href="">Оборудование для смазки и обдува</a></li>
+                <li> <a class="menu__subitem-link" href="">Гидравлическое оборудование</a></li>
+              </ul>
+            </div>
+            <div class="menu__item"><a class="menu__item-link" href="">Разделители сред</a></div>
+            <div class="menu__item"><a class="menu__item-link" href="">Краны и клапаны</a></div>
+            <div class="menu__item"><a class="menu__item-link" href="">Запчасти</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-mobile">
+      <div class="container"> 
+        <div class="menu-mobile__top">
+          <div class="menu-mobile__logo"> <img src="assets/img/logo_header.svg" alt="alt"/>
+          </div>
+          <div class="menu-mobile__close"> </div>
+        </div>
+        <div class="menu-mobile__content"> <a class="menu-mobile__link" href="">Бренды</a><a class="menu-mobile__link" href="">Компания</a><a class="menu-mobile__link" href="">Доставка и оплата</a><a class="menu-mobile__link menu-mobile__link_has-lvl2" data-link="knowledge">База знаний</a><a class="menu-mobile__link menu-mobile__link_has-lvl2" data-link="press-center">Пресс-центр</a><a class="menu-mobile__link" href="">Контакты</a>
+          <div class="menu-mobile__content-lvl2" data-link="knowledge"><a class="menu-mobile__link" href="">Опросные листы </a><a class="menu-mobile__link" href="">Конвертер величин</a><a class="menu-mobile__link" href="">Каталоги производителей</a></div>
+          <div class="menu-mobile__content-lvl2" data-link="press-center"><a class="menu-mobile__link" href="">Новости </a><a class="menu-mobile__link" href="">Статьи</a></div>
+        </div>
+        <div class="menu-mobile__popups"> <a class="btn white openmodal" data-modal="modal-callback">Заказать звонок</a><a class="btn green">Подобрать аналог</a></div>
+      </div>
+      <div class="menu-mobile__catalog-btn">Каталог</div>
+    </div>
+    <div class="catalog-mobile">
+      <div class="container"> 
+        <div class="catalog-mobile__top">
+          <div class="catalog-mobile__logo"> <img src="assets/img/logo_header.svg" alt="alt"/>
+          </div>
+          <div class="catalog-mobile__close"> </div>
+        </div>
+        <div class="catalog-mobile__content"> <a class="catalog-mobile__link">Системы автоматизации</a><a class="catalog-mobile__link catalog-mobile__link_has-lvl2" data-link="rashod">Расходомеры и ротамеры</a><a class="catalog-mobile__link">Манометры и индикаторы</a><a class="catalog-mobile__link catalog-mobile__link_has-lvl2" data-link="pressure">Датчики давления</a><a class="catalog-mobile__link catalog-mobile__link_has-lvl2" data-link="uroven">Уровнемеры</a><a class="catalog-mobile__link catalog-mobile__link_has-lvl2" data-link="analizatory">Анализаторы</a><a class="catalog-mobile__link catalog-mobile__link_has-lvl2" data-link="termo">Термометры</a><a class="catalog-mobile__link catalog-mobile__link_has-lvl2" data-link="temperature">Датчики температуры</a><a class="catalog-mobile__link catalog-mobile__link_has-lvl2" data-link="pnevmat">Пневматика</a><a class="catalog-mobile__link">Разделители сред</a><a class="catalog-mobile__link">Краны и клапаны</a><a class="catalog-mobile__link">Запчасти</a>
+          <div class="catalog-mobile__content-lvl2" data-link="rashod"><a class="catalog-mobile__content-lvl2-top">Расходомеры и ротамеры</a><a class="catalog-mobile__link" href="">Ротамеры </a><a class="catalog-mobile__link" href="">Вихревые расходомеры</a><a class="catalog-mobile__link" href="">Кориолисовые расходомеры</a><a class="catalog-mobile__link" href="">Термомассовые расходомеры</a><a class="catalog-mobile__link" href="">Ультразвуковые расходомеры</a><a class="catalog-mobile__link" href="">Электромагнитные расходомеры</a><a class="catalog-mobile__link" href="">Принадлежности к расходомерам и ротамерам</a></div>
+          <div class="catalog-mobile__content-lvl2" data-link="pressure"><a class="catalog-mobile__content-lvl2-top">Датчики давления</a><a class="catalog-mobile__link" href="">Датчики абсолютного и избыточного давления </a><a class="catalog-mobile__link" href="">Датчики гидростатического уровня</a><a class="catalog-mobile__link" href="">Электронные реле давления</a><a class="catalog-mobile__link" href="">Принадлежности к датчикам давления</a></div>
+          <div class="catalog-mobile__content-lvl2" data-link="uroven"><a class="catalog-mobile__content-lvl2-top">Уровнемеры</a><a class="catalog-mobile__link" href="">Погружные датчики уровня </a><a class="catalog-mobile__link" href="">Вибрационные уровнемеры</a><a class="catalog-mobile__link" href="">Емкостные уровнемеры</a><a class="catalog-mobile__link" href="">Микроимпульсные уровнемеры</a><a class="catalog-mobile__link" href="">Радарные уровнемеры</a><a class="catalog-mobile__link" href="">Ультразвуковые уровнемеры</a><a class="catalog-mobile__link" href="">Флажковые уровнемеры</a><a class="catalog-mobile__link" href="">Термометры для тяжелых условий эксплуатации</a></div>
+          <div class="catalog-mobile__content-lvl2" data-link="analizatory"><a class="catalog-mobile__content-lvl2-top">Анализаторы</a><a class="catalog-mobile__link" href="">Анализаторы TOC, COD и SAC</a><a class="catalog-mobile__link" href="">Анализаторы для определения жесткости, содержания железа, хроматов</a><a class="catalog-mobile__link" href="">Датчики и преобразователи</a><a class="catalog-mobile__link" href="">Датчики кислорода</a><a class="catalog-mobile__link" href="">Датчики мутности</a><a class="catalog-mobile__link" href="">Датчики проводимости</a><a class="catalog-mobile__link" href="">Преобразователи и датчики хлора</a><a class="catalog-mobile__link" href="">Фотометры</a></div>
+          <div class="catalog-mobile__content-lvl2" data-link="termo"><a class="catalog-mobile__content-lvl2-top">Термометры</a><a class="catalog-mobile__link" href="">Термометры</a><a class="catalog-mobile__link" href="">Термоманометры</a></div>
+          <div class="catalog-mobile__content-lvl2" data-link="temperature"><a class="catalog-mobile__content-lvl2-top">Датчики температуры</a><a class="catalog-mobile__link" href="">Высокотемпературные термометры</a><a class="catalog-mobile__link" href="">Гигиенические термометры</a><a class="catalog-mobile__link" href="">Компактные датчики температуры</a><a class="catalog-mobile__link" href="">Многоточечные датчики температуры</a><a class="catalog-mobile__link" href="">Преобразователи температуры</a><a class="catalog-mobile__link" href="">Промышленные датчики температуры</a><a class="catalog-mobile__link" href="">Температурные переключатели</a><a class="catalog-mobile__link" href="">Термометры для тяжелых условий эксплуатации</a></div>
+          <div class="catalog-mobile__content-lvl2" data-link="pnevmat"><a class="catalog-mobile__content-lvl2-top">Пневматика</a><a class="catalog-mobile__link" href="">Пневмораспределители</a><a class="catalog-mobile__link" href="">Фитинги</a><a class="catalog-mobile__link" href="">Пневматические трубки</a><a class="catalog-mobile__link" href="">Подготовка сжатого воздуха</a><a class="catalog-mobile__link" href="">Клапаны и фильтры</a><a class="catalog-mobile__link" href="">Пневмодроссели и обратные клапаны</a><a class="catalog-mobile__link" href="">Пневматические цилиндры и приводы</a><a class="catalog-mobile__link" href="">Резьбовые соединения и трубки</a><a class="catalog-mobile__link" href="">Вакуумное оборудование</a><a class="catalog-mobile__link" href="">Оборудование для смазки и обдува</a><a class="catalog-mobile__link" href="">Гидравлическое оборудование</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="write-mail"> 
+      <div class="container">
+        <div class="write-mail__wrapper">
+          <div class="mobile-burger"> <span> </span><span> </span><span> </span></div><a class="write-mail__data" href="mailto:info@promer.pro"> 
+            <div class="write-mail__img"> <img src="assets/img/email.svg" alt="alt"/>
+            </div>
+            <div class="write-mail__text">Написать на почту</div></a>
+          <div class="mobile-search"></div>
+        </div>
+        <div class="mobile-search__wrapper">
+          <div class="mobile-search__field">
+            <div class="mobile-search__icon"> </div>
+            <input class="mobile-search__input" type="text"/>
+            <div class="mobile-search__close"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+<div class="page"> 
+  <div class="container">
+    <div class="breadcrumbs">
+      <div class="breadcrumbs-wrap"><a class="breadcrumbs-item" href="/">Главная</a><span class="breadcrumbs-item">Доставка и оплата</span>
+      </div>
+    </div>
+  </div>
+  <div class="delivery"> 
+    <div class="container">
+      <div class="page-title">Доставка и оплата </div>
+      <div class="delivery-content">
+        <div class="delivery-content__section">
+          <div class="delivery-content__section-suptitle">Доставка</div>
+          <ul class="custom-list">
+            <li>Доставляем по территории РФ</li>
+            <li>Возможен самовывоз со склада по предварительной договорённости.</li>
+            <li>Работаем с транспортными компаниями СДЭК, Деловые Линии, DPD и другими по вашему выбору.</li>
+            <li>Стоимость доставки рассчитывается индивидуально исходя из тарифов выбранной транспортной компании.</li>
+            <li>При заказе от 50000 ₽ доставка по России бесплатна.</li>
+          </ul>
+          <p class="delivery-content__section-text">Если при получении заказа заметили повреждение упаковки или сомневаетесь в целостности поставки, не подписывайте накладную. В случае сомнений обязательно проверьте груз на месте получения в присутствии сотрудника транспортной компании. Если нарушения обнаружатся, составьте акт о выявленных нарушениях вместе с представителем транспортной компании (образец акта у них обычно с собой).</p>
+          <p class="delivery-content__section-text">Если вы подпишете накладную и отпустите сотрудника транспортной компании, а недостатки обнаружите потом, у нас не будет возможности убедиться в подлинности претензии.</p>
+        </div>
+        <div class="delivery-content__section">
+          <div class="delivery-content__section-suptitle">Оплата</div>
+          <p class="delivery-content__section-text">Оплата принимается в безналичной форме на рассчётный счёт. Реквизиты для оплаты будут указаны в договоре-счёте после формирования заказа.</p>
+        </div>
+      </div>
+      <div class="main-form main-form_consultation">
+        <div class="container">
+          <div class="main-form__wrapper">
+            <div class="main-form__title">Свяжитесь с нами для консультации<br/> и оформления заказа</div>
+            <div class="main-form__content">
+              <form class="main-form__form">
+                <div class="main-form__row">
+                  <div class="main-form__form-block">
+                    <label class="custom-prompt">Ваш телефон</label>
+                    <input class="custom-input" name="phone" placeholder="+7 ( ___ ) ___-__-__" type="phone"/>
+                  </div>
+                  <div class="main-form__form-block">
+                    <label class="custom-prompt">Электронная почта</label>
+                    <input class="custom-input" name="email" placeholder="example@example.com" type="email"/>
+                  </div>
+                  <div class="main-form__form-block">
+                    <input class="custom-input custom-input_file" type="file" name="file"/><span>Добавить список закупок</span>
+                  </div>
+                  <div class="main-form__form-btn btn primary">Отправить запрос</div>
+                  <div class="agreement">Нажимая на кнопку, вы соглашаетесь на обработку <a href="/">персональных данных</a></div>
+                </div>
+              </form>
+              <div class="main-form__list">
+                <ul> 
+                  <li>Предложим лучшее решение по ценам и срокам</li>
+                  <li>Подберем российские аналоги</li>
+                  <li>Доставим оборудование из Европы</li>
+                </ul>
+              </div>
+            </div>
+            <div class="main-form__img"></div>
+          </div>
+        </div>
+      </div>
+      <div class="main-seo"> </div>
+      <div class="container"> 
+        <div class="section-title"> 
+          <h2 class="section-title__title">Заказ и доставка оборудования</h2>
+        </div>
+        <div class="main-seo__text"> 
+          <p>Промышленное оборудование — основа составляющей любого производства. Для функционирования и постоянной эксплуатации необходимо особое внимание уделить выбору бренда и основным преимуществам. Мы предлагаем:</p>
+          <p>Узкоспециализированное промышленное оборудование. Решения для  химической, пищевой, машиностроительной и энергетической промышленности, водоканалов. Каждый вид выполнен мировым заводом-изготовителем и полностью отвечает всем международным стандартам.</p>
+          <p class="main-seo__hidden">Промышленное оборудование — основа составляющей любого производства. Для функционирования и постоянной эксплуатации необходимо особое внимание уделить выбору бренда и основным преимуществам. Мы предлагаем:</p>
+          <p class="main-seo__hidden">Узкоспециализированное промышленное оборудование. Решения для  химической, пищевой, машиностроительной и энергетической промышленности, водоканалов. Каждый вид выполнен мировым заводом-изготовителем и полностью отвечает всем международным стандартам.</p>
+          <div class="main-seo__show-more">Читать полностью</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container"> 
+    <div class="footer__logo"> 
+      <div class="footer__logo-img"> <img src="assets/img/logo-footer.svg" alt="alt"/>
+      </div>
+      <div class="footer__logo-text">Контрольно-измерительное оборудование по всей России</div>
+    </div>
+    <div class="footer__items"> 
+      <div class="footer__items-menu">
+        <div class="footer__items-menu_list"> <a class="footer-link">Каталог</a><a class="footer-link">Бренды</a><a class="footer-link">Компания</a><a class="footer-link">Доставка и оплата</a><a class="footer-link">Опросные листы</a></div>
+        <div class="footer__items-menu_list"> <a class="footer-link">Конвертер величин</a><a class="footer-link">Каталог производителя</a><a class="footer-link">Новости</a><a class="footer-link">Статьи</a><a class="footer-link">Контакты</a></div>
+      </div>
+      <div class="footer__items-info"> 
+        <div class="footer__items-company"> 
+          <div class="footer-title">Связаться с нами</div>
+          <div class="footer-point"> <img src="assets/img/time.svg" alt="alt"/>
+            <div class="footer-point__text">Пн—Пт с 9 до 18</div>
+          </div><a class="footer-point" href="tel:8 (8352) 76-76-07"><img src="assets/img/phone.svg" alt="alt"/>
+            <div class="footer-point__text">8 (8352) 76-76-07</div></a><a class="footer-point" href="mailto:info@promer.pro"><img src="assets/img/email.svg" alt="alt"/>
+            <div class="footer-point__text">info@promer.pro</div></a>
+          <div class="footer-point"><img src="assets/img/map.svg" alt="alt"/>
+            <div class="footer-point__text">г. Чебоксары, ул. Академика А.Н. Крылова, д. 5, к. 1, пом. 1</div>
+          </div>
+        </div>
+        <div class="footer__items_form-block"> 
+          <div class="footer-title">Следить за новостями</div>
+          <div class="footer__items-form"> 
+            <form action="">
+              <input name="mail" placeholder="example@example.ru"/>
+              <button class="footer-btn grey" type="submit">Подписаться</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom"> 
+      <div class="footer__bottom-point">©2023 НПК «Промер». Все права защищены</div><a class="footer__bottom-link">Политика конфиденциальности</a>
+      <div class="footer__bottom-point">Дизайн сайта — <a class="footer__bottom-link">Indigo Amigo</a>. Разработка — <a class="footer__bottom-link">MediaWorks</a></div>
+    </div>
+  </div>
+</footer>
+<div class="bgmodal">
+  <div class="bgmodal__cont">
+    <div class="modal modal_order" data-modal="modal-order">
+      <div class="modal__close"></div>
+      <div class="modal__main"> 
+        <div class="modal__title">Оформить заказ</div>
+        <form class="modal__form" action=""> 
+          <div class="modal__form-row"> 
+            <div class="modal__form-block">
+              <label class="custom-prompt">Ваш телефон</label>
+              <input class="custom-input" name="phone" placeholder="+7 ( ___ ) ___-__-__" type="phone"/>
+            </div>
+            <div class="modal__form-block">
+              <label class="custom-prompt">Электронная почта</label>
+              <input class="custom-input" name="email" placeholder="example@example.com" type="email"/>
+            </div>
+            <div class="modal__form-block">
+              <input class="custom-input custom-input_file" type="file" name="file"/><span>Добавить список закупок</span>
+            </div>
+            <div class="modal__form-block">
+              <div class="modal__form-submit btn primary">Отправить запрос</div>
+            </div>
+          </div>
+          <div class="agreement">Нажимая на кнопку, вы соглашаетесь на обработку <a href="/">персональных данных</a></div>
+        </form>
+      </div>
+    </div>
+    <div class="modal modal_callback" data-modal="modal-callback">
+      <div class="modal__close"></div>
+      <div class="modal__main"> 
+        <div class="modal__title">Заказать звонок</div>
+        <form class="modal__form" action=""> 
+          <div class="modal__form-row"> 
+            <div class="modal__form-block">
+              <label class="custom-prompt">Ваш телефон</label>
+              <input class="custom-input" name="phone" placeholder="+7 ( ___ ) ___-__-__" type="phone"/>
+            </div>
+            <div class="modal__form-block">
+              <label class="custom-prompt">Электронная почта</label>
+              <input class="custom-input" name="email" placeholder="example@example.com" type="email"/>
+            </div>
+            <div class="modal__form-block">
+              <label class="custom-prompt">Ваш вопрос</label>
+              <textarea class="custom-textarea" placeholder="Ваш вопрос, если есть" rows="1"></textarea>
+            </div>
+            <div class="modal__form-block">
+              <input class="custom-input custom-input_file" type="file" name="file"/><span>Добавить список закупок</span>
+            </div>
+            <div class="modal__form-block">
+              <div class="modal__form-submit btn primary">Отправить запрос</div>
+            </div>
+          </div>
+          <div class="agreement">Нажимая на кнопку, вы соглашаетесь на обработку <a href="/">персональных данных</a></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="assets/js/main/main.min.js?1688543299683"></script>
